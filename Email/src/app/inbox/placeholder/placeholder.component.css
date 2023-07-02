@@ -1,0 +1,25 @@
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+    /* margin-top:40px; */
+    margin-right: 30px;
+    border: 2px solid black;
+}
+
+.box{
+    text-align: center;
+}
+
+h1{
+   display: block;
+    font-size: 40px;
+}
+
+@media only screen and(max-width:990px){
+    .item{
+        display: block;
+    }
+}

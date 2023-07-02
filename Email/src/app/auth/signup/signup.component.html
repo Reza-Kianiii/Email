@@ -1,0 +1,32 @@
+
+<div class="Container">
+    
+    <div class="modal">
+    <h3 >Create a Account</h3>
+   <form [formGroup]="Signup" (ngSubmit)="onsubmit()">    
+
+<app-input [stylefake]="'padding: 0 0 0 60px' " [control]="U.get('Username')"  placeholderrr="Username" type="text" [classicon]="'fa-solid fa-user icon'" ></app-input>
+
+<app-input  [stylefake]="'padding: 0 0 0 60px' "[control]="U.get('Passwrod')" [placeholderrr]="'Password'" [type]="'password'" [classicon]="'fa-solid fa-lock icon'"></app-input>
+
+<app-input [stylefake]="'padding: 0 0 0 60px' " [control]="U.get('Confirmpassword')" [placeholderrr]="'Confirmpassword'" [type]="'password'" [classicon]="'fa-solid fa-lock icon'" ></app-input>
+<ng-container *ngIf="U.get('Confirmpassword')?.dirty && U.get('Confirmpassword')?.touched" >
+    <div *ngIf="Signup.errors?.['additinalerrormatch_password']" class="errors">
+        Password do not match
+    </div>
+    <div *ngIf="Signup.errors?.['Notconnected']" >
+        Please check your internet
+    </div>
+</ng-container>
+<input type="submit" [disabled]="Signup.invalid">
+</form>
+</div>
+
+</div>
+
+<app-loader class="pos"></app-loader>
+
+
+
+
+

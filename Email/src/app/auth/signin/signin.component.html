@@ -1,0 +1,22 @@
+
+<div class="Container">
+    
+    <div class="modal">
+    <h3 >Login</h3>
+<form action="" [formGroup]="signin"  (ngSubmit)="submit()">
+<app-input  [stylefake]="'padding: 0 0 0 60px' "  [control]="U.get('username')"  placeholderrr="Username" type="text" [classicon]="'fa-solid fa-user icon'" ></app-input>
+
+<app-input [stylefake]="'padding: 0 0 0 60px' " [control]="U.get('password')" [placeholderrr]="'Password'" [type]="'password'" [classicon]="'fa-solid fa-lock icon'"></app-input>
+
+<ng-container *ngIf="U.get('username')?.dirty && U.get('username')?.touched  && U.get('password')?.dirty  && U.get('password')?.touched ">
+    <div *ngIf="signin.errors?.['Notuser']" class="errors">
+        You entered the wrong username or password
+    </div>
+</ng-container>
+<input type="submit" [disabled]="signin.invalid">
+</form>
+</div>
+
+</div>
+
+<app-loader class="pos"></app-loader>

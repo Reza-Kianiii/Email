@@ -1,0 +1,37 @@
+
+<div class="field">
+    <i [class]="classicon"></i>
+    <input  [type]="type" [formControl]="control" [style]="stylefake" [placeholder]="placeholderrr" />
+    <ng-container *ngIf="control.dirty && control.touched && control.errors" >
+        <div *ngIf="control.errors.required" class="errors">
+            Please enter the value
+        </div>
+        <div *ngIf="control.errors.email" class="errors">
+            Please enter the correct email
+        </div>
+        <div *ngIf="control.errors.minlength" class="errors">
+            char between  {{control.errors.minlength.requiredLength}}  of
+                       {{control.errors.minlength.actualLength}}
+        </div>
+        <div *ngIf="control.errors.maxlength" class="errors">
+    char between        {{control.errors.maxlength.requiredLength}} of 
+            {{control.errors.maxlength.actualLength}}
+        </div>
+
+        <div *ngIf="control.errors.username_is_use" class="errors">
+
+            Username is already in use
+
+        </div>
+        <div *ngIf="control.errors.error_is_Unknow" class="errors" >
+            Unknown error
+        </div>
+    </ng-container>
+</div>
+
+
+<!-- {{control.errors.required |json}} -->
+
+<!-- {{control.errors.minlength|json}} -->
+
+<!-- {{control.errors.username_is_use |json}} -->

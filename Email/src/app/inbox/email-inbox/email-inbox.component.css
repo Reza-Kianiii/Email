@@ -1,0 +1,18 @@
+
+
+
+
+.pos{
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+} 
+
+.item{
+    margin: 15px;
+    width: 100%;
+}
+
+

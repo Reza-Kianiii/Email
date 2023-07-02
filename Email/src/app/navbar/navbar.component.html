@@ -1,0 +1,37 @@
+
+<!-- <div class="Navbar"> -->
+
+    <!-- <ng-container *ngIf="shownavbar  else other">
+        <a  routerLinkActive="active" >Inbox</a>
+        <a  routerLinkActive="active">Sign Out</a>
+    </ng-container>
+    <ng-template #other>
+        <a  routerLinkActive="active">Sign In</a>
+        <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sign up</a>
+    </ng-template> -->
+
+
+    <div class="ui inverted menu">
+        <ng-container *ngIf="shownavbar  else other" >
+        <a [routerLink]="['/Inbox']"  routerLinkActive="active" class=" item">
+            Inbox
+        </a>
+        <a [routerLink]="['Sign out']" routerLinkActive="active" class="item">
+            Sign Out
+        </a>
+        </ng-container>
+        <ng-template #other>
+        
+        <a routerLinkActive="active" [routerLink]="['']" [routerLinkActiveOptions]="{exact:true}" class="item">
+            Sign In
+        </a>
+        <a  routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/Sign up']"  class="item">
+            Sign up
+        </a>
+       </ng-template>
+      </div>
+
+
+<!-- </div> -->
+
+

@@ -1,0 +1,35 @@
+<!-- 
+<div class="Container_all">
+
+<app-email-create></app-email-create>
+
+<div class="Container_email" >
+
+    <div [routerLink]="item['id']" routerLinkActive="active" *ngFor="let item of listarray; let i=index" class="Email_item" >
+        <div style="display: inline;">
+        <i class="fa-solid fa-envelope"></i>
+        <span  >{{i}}</span>
+       </div>
+        <p class="email">{{item['from']}}</p>
+    </div>
+
+</div>
+
+</div>
+
+
+
+<app-loader class="pos"></app-loader> -->
+
+<div class="ui list  item"  >
+    <app-email-create></app-email-create>
+    <div [routerLink]="item['id']" *ngFor="let item of listarray;let i=index" class="item">
+      <i class="map marker icon" style="font-size: 40px;"></i>
+      <div class="content">
+        <a class="header">{{item['from']}}</a>
+        <!-- <div class="description">An excellent polish restaurant, quick delivery and hearty, filling meals.</div> -->
+      </div>
+    </div>
+  
+  </div>
+  <app-loader class="pos"></app-loader> 

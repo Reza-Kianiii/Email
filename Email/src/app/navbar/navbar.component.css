@@ -1,0 +1,36 @@
+.Navbar{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    /* padding: 20px 30px; */
+    min-width: 460px;
+    
+}
+.Navbar a{
+    margin-right: 30px;
+    font-size: 25px;
+    height: 100%;
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+}
+.Navbar a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.active{
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 768px){
+
+    .Navbar a{
+        font-size: 15px;
+        padding: 1.3rem 1rem ;
+        /* margin: ; */
+         
+    }
+}

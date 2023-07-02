@@ -1,0 +1,47 @@
+.Container_Email{
+    width: 100%;
+    height: 100%;
+  
+    margin: auto;
+}
+
+.List{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+.emails_item{
+    width: 40%;
+ 
+}
+
+.show_email{
+    width: 60%;
+
+}
+
+@media  only screen and (max-width:990px){
+    /* .List{
+        display: block;        
+    }
+    .emails_item{
+        width: 100%;
+       
+    }
+    .show_email{
+        width: 100%;
+        
+    } */
+
+    .item{
+        display: block;
+    }
+
+}
+
+.Contianer_emails{
+    overflow: hidden;
+    width: 30%;
+}

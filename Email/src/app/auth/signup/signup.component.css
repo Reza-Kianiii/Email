@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.Container{
+    
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    text-align: center;
+    width: 40rem;
+  
+}
+
+
+
+.modal h3{
+    font-size: 40px;
+}
+input[type='submit']{
+    margin:  auto;
+    height: 50px;
+    width: 80%;
+    border-radius: 2rem;
+    font-size: 30px;
+    background-color: yellow;
+}
+
+.errors{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0.6rem auto;
+    font-size: 30px;
+    color: red;
+
+}
+
+.pos{
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+
+@media only screen and (max-width:460px ){
+    .Container{
+        min-width: 460px;
+    }
+}

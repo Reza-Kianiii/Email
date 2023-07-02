@@ -1,0 +1,27 @@
+
+<form [formGroup]="formmain"  (ngSubmit)="onsubmit()">
+    
+    <label for="" class="font">from : </label>
+    <app-input  [stylefake]="'padding: 0 0 0 30px'" [control]="F.get('from')" [placeholderrr]="''" [type]="'email'" [classicon]="''" ></app-input>
+   
+
+    <label for="" class="font">to : </label>
+        <app-input [stylefake]="'padding: 0 0 0 30px'" [control]="F.get('to')" [placeholderrr]="''" [type]="'email'" [classicon]="''" ></app-input>
+
+       <label for="" class="font">subject :        </label>
+    <app-input [stylefake]="'padding: 0 0 0 30px'" [control]="F.get('subject')" [placeholderrr]="''" [type]="'text'" [classicon]="''" ></app-input>
+   
+    <label for="" class="font">Text : </label>
+    <app-input [stylefake]="'padding: 0 0 0 30px'" [control]="F.get('Text')" [placeholderrr]="''" [type]="'text'" [classicon]="''" ></app-input>
+   
+    <button [disabled]="formmain.invalid"
+    type="submit"
+    class="ui button primary"
+   style="margin-top: 15px;"
+    >
+    Send Email
+        
+    </button>
+
+
+</form>
